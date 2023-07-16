@@ -1,0 +1,133 @@
+.s-nav {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsla(0, 0.00%, 10.59%, 0.80);
+  background-image: linear-gradient(to bottom, hsla(0, 0.00%, 0.00%, 0.40), transparent);
+
+  backdrop-filter: blur(5px);
+
+  color: var(--white-492b7127);
+}
+
+.c-container {
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+  flex: 1;
+}
+
+.c-container.cc-new-refokus {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.c-container.cc-small {
+  max-width: 1080px;
+}
+
+.c-container.cc-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.s-nav_layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-brand {
+  color: hsla(0, 0.00%, 100.00%, 1.00);
+}
+
+.s-brand_text {
+  font-size: 1.6rem;
+}
+
+.s-nav_menu {
+  display: flex;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  .s-nav_menu {
+    position: absolute;
+    z-index: 1;
+    padding: 16px;
+    flex-direction: column;
+    background-color: rgba(27, 27, 27, 0.8);
+  }
+}
+
+.s-nav_link {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-radius: 16px;
+
+  transition: background-color 200ms ease;
+
+  color: hsla(0, 0.00%, 100.00%, 1.00);
+
+  cursor: pointer;
+}
+
+.s-nav_link:hover {
+  background-color: hsla(0, 0.00%, 10.59%, 0.38);
+}
+
+@media screen and (max-width: 991px) {
+  .s-menu-button {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .s-menu-button:global(.w--open) {
+    background-color: transparent;
+  }
+}
+
+.s-nav_bg {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 0;
+
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-nav_mouse-blur {
+  position: absolute;
+  z-index: -1;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  background-color: hsla(0, 0.00%, 100.00%, 0.10);
+
+  filter: blur(30px);
+}
